@@ -1,0 +1,27 @@
+[2013-10-14 20:49:15] START
+[2013-10-14 20:49:54] UPLOAD /home/jbtte/web2py/applications/tjdf/modules/tj.py: 43
+[2013-10-14 21:48:11] EDIT tjdf/controllers/default.py: 3
+[2013-10-14 21:48:33] EDIT tjdf/controllers/default.py: 0
+[2013-10-14 21:49:10] EDIT tjdf/controllers/default.py: 0
+[2013-10-14 21:49:45] CREATE default/registro.html: 0
+[2013-10-14 21:50:17] EDIT tjdf/views/default/registro.html: 0
+[2013-10-14 21:52:16] EDIT tjdf/controllers/default.py: 0
+[2013-10-14 21:53:07] DELETE tjdf/views/default/registro.html: -3
+[2013-10-14 21:53:23] CREATE default/cadastro.html: 0
+[2013-10-14 21:53:51] EDIT tjdf/views/default/cadastro.html: 0
+[2013-10-14 21:54:24] EDIT tjdf/views/default/cadastro.html: 0
+[2013-10-14 21:55:12] EDIT tjdf/views/default/cadastro.html: 0
+[2013-10-14 21:55:47] EDIT tjdf/views/default/cadastro.html: 0
+[2013-10-14 21:56:04] EDIT tjdf/views/default/cadastro.html: -1
+[2013-10-14 21:58:36] EDIT tjdf/controllers/default.py: 2
+[2013-10-14 21:59:24] EDIT tjdf/views/default/cadastro.html: 1
+[2013-10-14 21:59:59] EDIT tjdf/views/default/cadastro.html: 0
+[2013-10-14 22:00:48] EDIT tjdf/views/default/cadastro.html: 0
+[2013-10-14 22:01:04] EDIT tjdf/views/default/cadastro.html: 0
+[2013-10-14 22:02:18] EDIT tjdf/views/default/cadastro.html: 4
+[2013-10-14 22:03:16] EDIT tjdf/controllers/default.py: 0
+[2013-10-14 22:03:36] EDIT tjdf/controllers/default.py: 0
+[2013-10-14 22:04:06] EDIT tjdf/controllers/default.py: 0
+[2013-10-14 22:17:49] EDIT tjdf/models/db.py: -7
+[2013-10-14 22:19:35] EDIT tjdf/models/db.py: 0
+[2013-10-14 22:21:41] EDIT tjdf/controllers/default.py: 2
