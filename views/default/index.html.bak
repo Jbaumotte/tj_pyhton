@@ -1,0 +1,6 @@
+{{extend 'layout.html'}}
+{{=SQLTABLE(rows, columns=processo.criado_em)}}
+<h4>
+    Relatora: {{=session.frelatora}}<br>
+    Revisora: {{=session.frevisora}}<br>
+    Total: {{=session.ftotal}}<h4>

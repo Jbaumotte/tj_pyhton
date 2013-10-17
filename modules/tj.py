@@ -2,11 +2,10 @@
 ##Personal project - Joao Paulo Baumotte
 ##Name: Tribunal
 ##October 2013
-##From a given file number, extract from the justice court internet site
-##the relevant information from the file and put it in a convinient and easy
-##to look up mask
+##From a given file number, extract from the justice court web site
+##the relevant information from the file and place it in a convinient and easy
+##to look up database
 #########################################################################
-
 
 ##import library to do http requests:
 import urllib
@@ -14,16 +13,11 @@ import urllib
 ##import beautiful soup parser:
 from bs4 import BeautifulSoup
 
-
-import codecs
-
-
 def get_page(num_processo):
 
     ##getting the url
     url = get_url(num_processo)
-    #url = "http://tjdf19.tjdft.jus.br/cgi-bin/tjcgi1?ORIGEM=INTER&NXTPGM=plhtml02&SELECAO=1&COMMAND=ok&TitCabec=2%AA+Inst%E2ncia+%3E+Consulta+Processual&CHAVE=20100111297196"
-
+    
     ##download the file:    
     html = urllib.urlopen(url)
 
@@ -48,13 +42,24 @@ def get_page(num_processo):
     ## Establishing the role of my sector
     relator = ver_relator(relator)
 
-    ## placing mask on number
+    ## placing mask on file number
     processo = mascara_processo(processo)
+    
+    ## Checking if the prosecution was placed as the defendent by the website 
+    ## and correcting it
+    if reu == 'MINIST\xc9RIO P\xdaBLICO DO DISTRITO FEDERAL E TERRIT\xd3RIOS':
+        reu = soup.find(id="i_nomeAutor")["value"].encode('latin1')
+    
+    ## Making the defendent`s name shows in the correct manner (first letter 
+    ## only in capital)
+    reu = reu.title()
     
     return reu, classe, processo, crime, relator
 
 
 def get_url(num_processo):
+    
+    ## depending on the way the file number is inputed by the user diferent web address must be used
     if len(str(num_processo)) < 9:
         url = "http://tjdf19.tjdft.jus.br/cgi-bin/tjcgi1?NXTPGM=plhtml06&ORIGEM=INTER&CDNUPROC="+str(num_processo)
 			
@@ -64,21 +69,14 @@ def get_url(num_processo):
     return url
 
 def ver_relator(relator):
-    if relator == "Des. HUMBERTO ADJUTO ULHA":
-        relator = "Revisora"
+    if relator == 'Des\xaa. NILSONI DE FREITAS':
+        relator = "Relatora"
 
     else:
-        relator = "Relatora"
+        relator = "Revisora"
 
     return relator
 
 def mascara_processo (num):
     new_num = num[:4]+"."+num[4:6]+"."+num[6:7]+"."+num[7:13]+"-"+num[13]
     return new_num
-        
-        
-	
-
-
-
-    

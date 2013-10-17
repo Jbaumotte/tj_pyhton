@@ -15,11 +15,13 @@ else:
 from gluon.tools import Auth
 auth = Auth(db)
 auth.define_tables(username=True)
+auth.settings.registration_requires_approval = True
 
 db.define_table('processo',
-   Field('user'),
-   Field('musica'),
-   Field('banda'),
-   Field('url'),
-   Field('created_on', 'datetime', default=request.now),
-   Field('editado', default='false'))
+   Field('user', default = auth.user_id),
+   Field('criado_em', 'datetime', default=request.now),
+   Field('classe'),
+   Field('numero'),
+   Field('competencia'),
+   Field('reu'),
+   Field('crime'))

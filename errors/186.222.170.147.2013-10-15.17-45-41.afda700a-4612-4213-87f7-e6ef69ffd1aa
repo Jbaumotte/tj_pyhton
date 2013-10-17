@@ -1,0 +1,751 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'NoneType' object has no attribute 'encode'"
+p3
+sS'layer'
+p4
+S'/home/jbtte/web2py/applications/tjdf/models/db.py'
+p5
+sS'code'
+p6
+S'# -*- coding: utf-8 -*-\n# request.requires_https()\n\nif not request.env.web2py_runtime_gae:\n    ## if NOT running on Google App Engine use SQLite or other DB\n    #from gluon.contrib.heroku import *\n    #try: db = DAL(os.environ.get(\'DATABASE_URL\'))\n    #except: db = get_db(name=None, pool_size=10)\n    db = DAL(\'sqlite://storage.db\')\nelse:\n    db = DAL(\'google:datastore\')\n    session.connect(request, response, db=db)\n\n\nfrom gluon.tools import Auth\nauth = Auth(db)\nauth.define_tables(username=True)\nauth.settings.registration_requires_approval = True\n\ndb.define_table(\'processo\',\n   Field(\'criado_em\', \'datetime\', default=request.now),\n   Field(\'classe\', default=session.classe.encode("utf8")),\n   Field(\'numero\', default=session.numero),\n   Field(\'competencia\', default=session.competencia.encode("utf8")),\n   Field(\'reu\', default=session.reu.encode("utf8")),\n   Field(\'crime\', default=session.crime.encode("utf8")))\n'
+p7
+sS'snapshot'
+p8
+(dp9
+S'exception'
+p10
+(dp11
+S'__hash__'
+p12
+S"<method-wrapper '__hash__' of exceptions.AttributeError object>"
+p13
+sS'__setattr__'
+p14
+S"<method-wrapper '__setattr__' of exceptions.AttributeError object>"
+p15
+sS'__reduce_ex__'
+p16
+S'<built-in method __reduce_ex__ of exceptions.AttributeError object>'
+p17
+sS'__getslice__'
+p18
+S"<method-wrapper '__getslice__' of exceptions.AttributeError object>"
+p19
+sS'__getitem__'
+p20
+S"<method-wrapper '__getitem__' of exceptions.AttributeError object>"
+p21
+sS'__setstate__'
+p22
+S'<built-in method __setstate__ of exceptions.AttributeError object>'
+p23
+sS'args'
+p24
+S'("\'NoneType\' object has no attribute \'encode\'",)'
+p25
+sS'__reduce__'
+p26
+S'<built-in method __reduce__ of exceptions.AttributeError object>'
+p27
+sS'__str__'
+p28
+S"<method-wrapper '__str__' of exceptions.AttributeError object>"
+p29
+sS'__format__'
+p30
+S'<built-in method __format__ of exceptions.AttributeError object>'
+p31
+sS'__getattribute__'
+p32
+S"<method-wrapper '__getattribute__' of exceptions.AttributeError object>"
+p33
+sS'__class__'
+p34
+S"<type 'exceptions.AttributeError'>"
+p35
+sS'__unicode__'
+p36
+S'<built-in method __unicode__ of exceptions.AttributeError object>'
+p37
+sS'__delattr__'
+p38
+S"<method-wrapper '__delattr__' of exceptions.AttributeError object>"
+p39
+sS'__subclasshook__'
+p40
+S'<built-in method __subclasshook__ of type object>'
+p41
+sS'__repr__'
+p42
+S"<method-wrapper '__repr__' of exceptions.AttributeError object>"
+p43
+sS'__dict__'
+p44
+S'{}'
+p45
+sS'__sizeof__'
+p46
+S'<built-in method __sizeof__ of exceptions.AttributeError object>'
+p47
+sS'__doc__'
+p48
+S"'Attribute not found.'"
+p49
+sS'__init__'
+p50
+S"<method-wrapper '__init__' of exceptions.AttributeError object>"
+p51
+sS'__new__'
+p52
+S'<built-in method __new__ of type object>'
+p53
+ssS'evalue'
+p54
+S"'NoneType' object has no attribute 'encode'"
+p55
+sS'request'
+p56
+cgluon.html
+XML_unpickle
+p57
+(S's\xb7J\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">ajax</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">application</td><td valign="top">:</td><td><div>tjdf</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">args</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">body</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x21406f8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cid</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">client</td><td valign="top">:</td><td><div>186.222.170.147</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">controller</td><td valign="top">:</td><td><div>default</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cookies</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">session_id_admin</td><td valign="top">:</td><td><div>186.222.170.147-f6c91ebf-5649-424e-9897-6364bee6eb32<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_welcome</td><td valign="top">:</td><td><div>186.222.170.147-940e381d-1e58-449e-a734-408356b926ea<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">env</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">app_folders</td><td valign="top">:</td><td><div>set([&#x27;/home/jbtte/web2py/applications/admin/&#x27;, &#x27;/home/jbtte/web2py/applications/tjdf/&#x27;, &#x27;/home/jbtte/web2py/applications/welcome/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">applications_parent</td><td valign="top">:</td><td><div>/home/jbtte/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">content_length</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">content_type</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">db_sessions</td><td valign="top">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">debugging</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">document_root</td><td valign="top">:</td><td><div>/usr/share/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">gluon_parent</td><td valign="top">:</td><td><div>/home/jbtte/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept</td><td valign="top">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept_encoding</td><td valign="top">:</td><td><div>gzip, deflate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_accept_language</td><td valign="top">:</td><td><div>pt-br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_connection</td><td valign="top">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_cookie</td><td valign="top">:</td><td><div>session_id_admin=186.222.170.147-f6c91ebf-5649-424e-9897-6364bee6eb32; session_id_welcome=186.222.170.147-940e381d-1e58-449e-a734-408356b926ea; __utma=133430031.675208605.1381858871.1381858871.1381858871.1; __utmb=133430031.4.10.1381858871; __utmc=133430031; __utmz=133430031.1381858871.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_host</td><td valign="top">:</td><td><div>jbtte.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_referer</td><td valign="top">:</td><td><div>https://jbtte.pythonanywhere.com/admin/default/design/tjdf</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_user_agent</td><td valign="top">:</td><td><div>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/536.30.1 (KHTML, like Gecko) Version/6.0.5 Safari/536.30.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_x_forwarded_for</td><td valign="top">:</td><td><div>186.222.170.147</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">http_x_real_ip</td><td valign="top">:</td><td><div>186.222.170.147</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">https</td><td valign="top">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_jython</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_pypy</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">local_hosts</td><td valign="top">:</td><td><div><table><tr><td><div>jbtte.pythonanywhere.com</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>50.19.109.98</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>glenn-liveweb2</div></td></tr><tr><td><div>localhost</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path_info</td><td valign="top">:</td><td><div>/tjdf/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">query_string</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remote_addr</td><td valign="top">:</td><td><div>10.124.50.5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">remote_port</td><td valign="top">:</td><td><div>39001</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">request_method</td><td valign="top">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">request_uri</td><td valign="top">:</td><td><div>/tjdf/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">script_name</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_name</td><td valign="top">:</td><td><div>jbtte.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_port</td><td valign="top">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">server_protocol</td><td valign="top">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uwsgi_node</td><td valign="top">:</td><td><div>glenn-liveweb2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uwsgi_version</td><td valign="top">:</td><td><div>1.9.16</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_path</td><td valign="top">:</td><td><div>/home/jbtte/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_version</td><td valign="top">:</td><td><div>2.5.1-stable+timestamp.2013.06.06.15.39.19</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_errors</td><td valign="top">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogWrapper object at 0x21a75d0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_file_wrapper</td><td valign="top">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_input</td><td valign="top">:</td><td><div>&lt;uwsgi._Input object at 0x7f1189537b58&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_multiprocess</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_multithread</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_run_once</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_url_scheme</td><td valign="top">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi_version</td><td valign="top">:</td><td><div><table><tr><td><div>1</div></td></tr><tr><td><div>0</div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">extension</td><td valign="top">:</td><td><div>html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">folder</td><td valign="top">:</td><td><div>/home/jbtte/web2py/applications/tjdf/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">function</td><td valign="top">:</td><td><div>index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">get_vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">global_settings</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">app_folders</td><td valign="top">:</td><td><div>set([&#x27;/home/jbtte/web2py/applications/admin/&#x27;, &#x27;/home/jbtte/web2py/applications/tjdf/&#x27;, &#x27;/home/jbtte/web2py/applications/welcome/&#x27;])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">applications_parent</td><td valign="top">:</td><td><div>/home/jbtte/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">db_sessions</td><td valign="top">:</td><td><div>set([])</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">debugging</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">gluon_parent</td><td valign="top">:</td><td><div>/home/jbtte/web2py</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_jython</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_pypy</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">local_hosts</td><td valign="top">:</td><td><div><table><tr><td><div>jbtte.pythonanywhere.com</div></td></tr><tr><td><div>::1</div></td></tr><tr><td><div>::ffff:127.0.0.1</div></td></tr><tr><td><div>50.19.109.98</div></td></tr><tr><td><div>127.0.0.1</div></td></tr><tr><td><div>glenn-liveweb2</div></td></tr><tr><td><div>localhost</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">web2py_version</td><td valign="top">:</td><td><div>2.5.1-stable+timestamp.2013.06.06.15.39.19</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_https</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_local</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">is_restful</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">now</td><td valign="top">:</td><td><div>datetime.datetime(2013, 10, 15, 17, 45, 41, 822471)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">post_vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">raw_args</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">raw_extension</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">url</td><td valign="top">:</td><td><div>/tjdf/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">utcnow</td><td valign="top">:</td><td><div>datetime.datetime(2013, 10, 15, 17, 45, 41, 822502)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uuid</td><td valign="top">:</td><td><div>tjdf/186.222.170.147.2013-10-15.17-45-41.afda700a-4612-4213-87f7-e6ef69ffd1aa</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">vars</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">environ</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">CONTENT_LENGTH</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">CONTENT_TYPE</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">DOCUMENT_ROOT</td><td valign="top">:</td><td><div>/usr/share/nginx/html</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTPS</td><td valign="top">:</td><td><div>on</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT</td><td valign="top">:</td><td><div>text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT_ENCODING</td><td valign="top">:</td><td><div>gzip, deflate</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_ACCEPT_LANGUAGE</td><td valign="top">:</td><td><div>pt-br</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_CONNECTION</td><td valign="top">:</td><td><div>close</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_COOKIE</td><td valign="top">:</td><td><div>session_id_admin=186.222.170.147-f6c91ebf-5649-424e-9897-6364bee6eb32; session_id_welcome=186.222.170.147-940e381d-1e58-449e-a734-408356b926ea; __utma=133430031.675208605.1381858871.1381858871.1381858871.1; __utmb=133430031.4.10.1381858871; __utmc=133430031; __utmz=133430031.1381858871.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_HOST</td><td valign="top">:</td><td><div>jbtte.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_REFERER</td><td valign="top">:</td><td><div>https://jbtte.pythonanywhere.com/admin/default/design/tjdf</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_USER_AGENT</td><td valign="top">:</td><td><div>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/536.30.1 (KHTML, like Gecko) Version/6.0.5 Safari/536.30.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_X_FORWARDED_FOR</td><td valign="top">:</td><td><div>186.222.170.147</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">HTTP_X_REAL_IP</td><td valign="top">:</td><td><div>186.222.170.147</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">PATH_INFO</td><td valign="top">:</td><td><div>/tjdf/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">QUERY_STRING</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REMOTE_ADDR</td><td valign="top">:</td><td><div>10.124.50.5</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REMOTE_PORT</td><td valign="top">:</td><td><div>39001</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REQUEST_METHOD</td><td valign="top">:</td><td><div>GET</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">REQUEST_URI</td><td valign="top">:</td><td><div>/tjdf/default/index</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SCRIPT_NAME</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_NAME</td><td valign="top">:</td><td><div>jbtte.pythonanywhere.com</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_PORT</td><td valign="top">:</td><td><div>443</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">SERVER_PROTOCOL</td><td valign="top">:</td><td><div>HTTP/1.1</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uwsgi.node</td><td valign="top">:</td><td><div>glenn-liveweb2</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">uwsgi.version</td><td valign="top">:</td><td><div>1.9.16</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.errors</td><td valign="top">:</td><td><div>&lt;uwsgi_file__bin_user_wsgi_wrapper.ErrorLogWrapper object at 0x21a75d0&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.file_wrapper</td><td valign="top">:</td><td><div>&lt;built-in function uwsgi_sendfile&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.input</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x21406f8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.multiprocess</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.multithread</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.run_once</td><td valign="top">:</td><td><div>False</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.url_scheme</td><td valign="top">:</td><td><div>https</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">wsgi.version</td><td valign="top">:</td><td><div>1</div></td></tr></table></div></td></tr></table></div></td></tr></table></div>'
+tRp58
+sS'frames'
+p59
+(lp60
+(dp61
+S'file'
+p62
+S'/home/jbtte/web2py/gluon/restricted.py'
+p63
+sS'dump'
+p64
+(dp65
+S'environment'
+p66
+S"{'A': <class 'gluon.html.A'>, 'ANY_OF': <class 'gluon.validators.ANY_OF'>, 'Auth': <class 'gluon.tools.Auth'>, 'B': <class 'gluon.html.B'>, 'BEAUTIFY': <class 'gluon.html.BEAUTIFY'>, 'BODY': <class 'gluon.html.BODY'>, 'BR': <class 'gluon.html.BR'>, 'BUTTON': <class 'gluon.html.BUTTON'>, 'CAT': <class 'gluon.html.CAT'>, 'CENTER': <class 'gluon.html.CENTER'>, ...}"
+p67
+sS'ccode'
+p68
+S'<code object <module> at 0x3dc2b30, file "/home/...e/web2py/applications/tjdf/models/db.py", line 4>'
+p69
+ssS'lnum'
+p70
+I212
+sS'lines'
+p71
+(dp72
+I207
+S'    try:'
+p73
+sI208
+S'        if isinstance(code, types.CodeType):'
+p74
+sI209
+S'            ccode = code'
+p75
+sI210
+S'        else:'
+p76
+sI211
+S'            ccode = compile2(code, layer)'
+p77
+sI212
+S'        exec ccode in environment'
+p78
+sI213
+S'    except HTTP:'
+p79
+sI214
+S'        raise'
+p80
+sI215
+S'    except RestrictedError:'
+p81
+sI216
+S'        # do not encapsulate (obfuscate) the original RestrictedError'
+p82
+ssS'call'
+p83
+S'(code=\'# -*- coding: utf-8 -*-\\n# request.requires_https...(\\\'crime\\\', default=session.crime.encode("utf8")))\\n\', environment={\'A\': <class \'gluon.html.A\'>, \'ANY_OF\': <class \'gluon.validators.ANY_OF\'>, \'Auth\': <class \'gluon.tools.Auth\'>, \'B\': <class \'gluon.html.B\'>, \'BEAUTIFY\': <class \'gluon.html.BEAUTIFY\'>, \'BODY\': <class \'gluon.html.BODY\'>, \'BR\': <class \'gluon.html.BR\'>, \'BUTTON\': <class \'gluon.html.BUTTON\'>, \'CAT\': <class \'gluon.html.CAT\'>, \'CENTER\': <class \'gluon.html.CENTER\'>, ...}, layer=\'/home/jbtte/web2py/applications/tjdf/models/db.py\')'
+p84
+sS'func'
+p85
+S'restricted'
+p86
+sa(dp87
+g62
+S'/home/jbtte/web2py/applications/tjdf/models/db.py'
+p88
+sg64
+(dp89
+S'default'
+p90
+S'undefined'
+p91
+sS'Field'
+p92
+S"<class 'gluon.dal.Field'>"
+p93
+sS'session'
+p94
+S'<Storage {}>'
+p95
+sS'session.classe'
+p96
+S'None'
+p97
+sS'session.classe.encode'
+p98
+g91
+ssg70
+I22
+sg71
+(dp99
+I17
+S'auth.define_tables(username=True)'
+p100
+sI18
+S'auth.settings.registration_requires_approval = True'
+p101
+sI19
+S''
+sI20
+S"db.define_table('processo',"
+p102
+sI21
+S"   Field('criado_em', 'datetime', default=request.now),"
+p103
+sI22
+S'   Field(\'classe\', default=session.classe.encode("utf8")),'
+p104
+sI23
+S"   Field('numero', default=session.numero),"
+p105
+sI24
+S'   Field(\'competencia\', default=session.competencia.encode("utf8")),'
+p106
+sI25
+S'   Field(\'reu\', default=session.reu.encode("utf8")),'
+p107
+sI26
+S'   Field(\'crime\', default=session.crime.encode("utf8")))'
+p108
+ssg83
+S'()'
+p109
+sg85
+S'<module>'
+p110
+sasS'pyver'
+p111
+S'Python 2.7.4: /usr/local/bin/uwsgi (prefix: /usr)'
+p112
+sS'session'
+p113
+g57
+(S's\x1a\x00\x00\x00<div><table></table></div>'
+tRp114
+sS'etype'
+p115
+S"<type 'exceptions.AttributeError'>"
+p116
+sS'date'
+p117
+S'Tue Oct 15 17:45:42 2013'
+p118
+sS'response'
+p119
+g57
+(S's$\x10\x00\x00<div><table><tr><td style="font-weight:bold;vertical-align:top">body</td><td valign="top">:</td><td><div>&lt;cStringIO.StringO object at 0x2a33ed8&gt;</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">cookies</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">session_id_tjdf</td><td valign="top">:</td><td><div>186.222.170.147-d4476669-c023-40bc-9170-85c806f8e46e<table><tr><td style="font-weight:bold;vertical-align:top">comment</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">domain</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">expires</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">httponly</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">max-age</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">path</td><td valign="top">:</td><td><div>/</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">secure</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">version</td><td valign="top">:</td><td><div></div></td></tr></table></div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">delimiters</td><td valign="top">:</td><td><div><table><tr><td><div>{{</div></td></tr><tr><td><div>}}</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">files</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">flash</td><td valign="top">:</td><td><div></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">generic_patterns</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">headers</td><td valign="top">:</td><td><div><table><tr><td style="font-weight:bold;vertical-align:top">X-Powered-By</td><td valign="top">:</td><td><div>web2py</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">menu</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">meta</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">models_to_run</td><td valign="top">:</td><td><div><table><tr><td><div>^\\w+\\.py$</div></td></tr><tr><td><div>^default/\\w+\\.py$</div></td></tr><tr><td><div>^default/index/\\w+\\.py$</div></td></tr></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">postprocessing</td><td valign="top">:</td><td><div><table></table></div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_cookie_expires</td><td valign="top">:</td><td><div>None</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_data_name</td><td valign="top">:</td><td><div>session_data_tjdf</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_filename</td><td valign="top">:</td><td><div>/home/jbtte/web2py/applications/tjdf/sessions/186.222.170.147-d4476669-c023-40bc-9170-85c806f8e46e</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id</td><td valign="top">:</td><td><div>186.222.170.147-d4476669-c023-40bc-9170-85c806f8e46e</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_id_name</td><td valign="top">:</td><td><div>session_id_tjdf</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_new</td><td valign="top">:</td><td><div>True</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">session_storage_type</td><td valign="top">:</td><td><div>file</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">status</td><td valign="top">:</td><td><div>200</div></td></tr><tr><td style="font-weight:bold;vertical-align:top">view</td><td valign="top">:</td><td><div>default/index.html</div></td></tr></table></div>'
+tRp120
+sS'locals'
+p121
+(dp122
+S'OBJECT'
+p123
+S"<class 'gluon.html.OBJECT'>"
+p124
+sS'SQLDB'
+p125
+S"<class 'gluon.dal.DAL'>"
+p126
+sg113
+S'<Storage {}>'
+p127
+sS'LINK'
+p128
+S"<class 'gluon.html.LINK'>"
+p129
+sS'BR'
+p130
+S"<class 'gluon.html.BR'>"
+p131
+sS'local_import'
+p132
+S'<function <lambda>>'
+p133
+sS'OPTGROUP'
+p134
+S"<class 'gluon.html.OPTGROUP'>"
+p135
+sS'__package__'
+p136
+S'None'
+p137
+sS'PRE'
+p138
+S"<class 'gluon.html.PRE'>"
+p139
+sS'IS_INT_IN_RANGE'
+p140
+S"<class 'gluon.validators.IS_INT_IN_RANGE'>"
+p141
+sS'IS_LOWER'
+p142
+S"<class 'gluon.validators.IS_LOWER'>"
+p143
+sS'IS_STRONG'
+p144
+S"<class 'gluon.validators.IS_STRONG'>"
+p145
+sS'cache'
+p146
+S'<gluon.cache.Cache object>'
+p147
+sS'IS_IN_DB'
+p148
+S"<class 'gluon.validators.IS_IN_DB'>"
+p149
+sS'TAG'
+p150
+S'<gluon.html.__TAG__ object>'
+p151
+sS'SQLField'
+p152
+S"<class 'gluon.dal.Field'>"
+p153
+sS'BODY'
+p154
+S"<class 'gluon.html.BODY'>"
+p155
+sS'IS_DATE_IN_RANGE'
+p156
+S"<class 'gluon.validators.IS_DATE_IN_RANGE'>"
+p157
+sS'TH'
+p158
+S"<class 'gluon.html.TH'>"
+p159
+sS'URL'
+p160
+S'<function URL>'
+p161
+sS'__file__'
+p162
+S"'/home/jbtte/web2py/applications/tjdf/models/db.py'"
+p163
+sS'db'
+p164
+S'<DAL uri="sqlite://storage.db">'
+p165
+sS'auth'
+p166
+S'<gluon.tools.Auth object>'
+p167
+sS'P'
+S"<class 'gluon.html.P'>"
+p168
+sS'TFOOT'
+p169
+S"<class 'gluon.html.TFOOT'>"
+p170
+sS'XHTML'
+p171
+S"<class 'gluon.html.XHTML'>"
+p172
+sS'ON'
+p173
+S'True'
+p174
+sS'OL'
+p175
+S"<class 'gluon.html.OL'>"
+p176
+sS'TEXTAREA'
+p177
+S"<class 'gluon.html.TEXTAREA'>"
+p178
+sS'MENU'
+p179
+S"<class 'gluon.html.MENU'>"
+p180
+sS'LOAD'
+p181
+S'<function LOAD>'
+p182
+sS'CODE'
+p183
+S"<class 'gluon.html.CODE'>"
+p184
+sS'HTTP'
+p185
+S"<class 'gluon.http.HTTP'>"
+p186
+sS'HR'
+p187
+S"<class 'gluon.html.HR'>"
+p188
+sS'IS_DATETIME'
+p189
+S"<class 'gluon.validators.IS_DATETIME'>"
+p190
+sS'HEAD'
+p191
+S"<class 'gluon.html.HEAD'>"
+p192
+sS'LABEL'
+p193
+S"<class 'gluon.html.LABEL'>"
+p194
+sS'CLEANUP'
+p195
+S"<class 'gluon.validators.CLEANUP'>"
+p196
+sS'SELECT'
+p197
+S"<class 'gluon.html.SELECT'>"
+p198
+sS'CENTER'
+p199
+S"<class 'gluon.html.CENTER'>"
+p200
+sS'Auth'
+p201
+S"<class 'gluon.tools.Auth'>"
+p202
+sS'__builtins__'
+p203
+S"{'ArithmeticError': <type 'exceptions.ArithmeticError'>, 'AssertionError': <type 'exceptions.AssertionError'>, 'AttributeError': <type 'exceptions.AttributeError'>, 'BaseException': <type 'exceptions.BaseException'>, 'BufferError': <type 'exceptions.BufferError'>, 'BytesWarning': <type 'exceptions.BytesWarning'>, 'DeprecationWarning': <type 'exceptions.DeprecationWarning'>, 'EOFError': <type 'exceptions.EOFError'>, 'Ellipsis': Ellipsis, 'EnvironmentError': <type 'exceptions.EnvironmentError'>, ...}"
+p204
+sS'HTML'
+p205
+S"<class 'gluon.html.HTML'>"
+p206
+sS'SQLFORM'
+p207
+S"<class 'gluon.sqlhtml.SQLFORM'>"
+p208
+sS'EM'
+p209
+S"<class 'gluon.html.EM'>"
+p210
+sS'redirect'
+p211
+S'<function redirect>'
+p212
+sS'FIELDSET'
+p213
+S"<class 'gluon.html.FIELDSET'>"
+p214
+sS'IS_EQUAL_TO'
+p215
+S"<class 'gluon.validators.IS_EQUAL_TO'>"
+p216
+sS'embed64'
+p217
+S'<function embed64>'
+p218
+sS'IS_LIST_OF'
+p219
+S"<class 'gluon.validators.IS_LIST_OF'>"
+p220
+sS'__name__'
+p221
+S"'__restricted__'"
+p222
+sS'EMBED'
+p223
+S"<class 'gluon.html.EMBED'>"
+p224
+sS'FORM'
+p225
+S"<class 'gluon.html.FORM'>"
+p226
+sS'H2'
+p227
+S"<class 'gluon.html.H2'>"
+p228
+sS'H3'
+p229
+S"<class 'gluon.html.H3'>"
+p230
+sS'BUTTON'
+p231
+S"<class 'gluon.html.BUTTON'>"
+p232
+sS'H1'
+p233
+S"<class 'gluon.html.H1'>"
+p234
+sS'H6'
+p235
+S"<class 'gluon.html.H6'>"
+p236
+sS'H4'
+p237
+S"<class 'gluon.html.H4'>"
+p238
+sS'H5'
+p239
+S"<class 'gluon.html.H5'>"
+p240
+sS'UL'
+p241
+S"<class 'gluon.html.UL'>"
+p242
+sS'IS_UPPER'
+p243
+S"<class 'gluon.validators.IS_UPPER'>"
+p244
+sS'xmlescape'
+p245
+S'<function xmlescape>'
+p246
+sS'IS_TIME'
+p247
+S"<class 'gluon.validators.IS_TIME'>"
+p248
+sS'OPTION'
+p249
+S"<class 'gluon.html.OPTION'>"
+p250
+sS'TITLE'
+p251
+S"<class 'gluon.html.TITLE'>"
+p252
+sS'CRYPT'
+p253
+S"<class 'gluon.validators.CRYPT'>"
+p254
+sS'IS_EMPTY_OR'
+p255
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p256
+sS'MARKMIN'
+p257
+S"<class 'gluon.html.MARKMIN'>"
+p258
+sS'INPUT'
+p259
+S"<class 'gluon.html.INPUT'>"
+p260
+sS'STRONG'
+p261
+S"<class 'gluon.html.STRONG'>"
+p262
+sS'COL'
+p263
+S"<class 'gluon.html.COL'>"
+p264
+sS'SCRIPT'
+p265
+S"<class 'gluon.html.SCRIPT'>"
+p266
+sS'TABLE'
+p267
+S"<class 'gluon.html.TABLE'>"
+p268
+sS'IS_IPV4'
+p269
+S"<class 'gluon.validators.IS_IPV4'>"
+p270
+sS'IS_LENGTH'
+p271
+S"<class 'gluon.validators.IS_LENGTH'>"
+p272
+sS'IS_IPV6'
+p273
+S"<class 'gluon.validators.IS_IPV6'>"
+p274
+sS'XML'
+p275
+S"<class 'gluon.html.XML'>"
+p276
+sS'B'
+S"<class 'gluon.html.B'>"
+p277
+sS'IMG'
+p278
+S"<class 'gluon.html.IMG'>"
+p279
+sS'SQLTABLE'
+p280
+S"<class 'gluon.sqlhtml.SQLTABLE'>"
+p281
+sS'IS_MATCH'
+p282
+S"<class 'gluon.validators.IS_MATCH'>"
+p283
+sS'IS_ALPHANUMERIC'
+p284
+S"<class 'gluon.validators.IS_ALPHANUMERIC'>"
+p285
+sS'SPAN'
+p286
+S"<class 'gluon.html.SPAN'>"
+p287
+sS'IS_JSON'
+p288
+S"<class 'gluon.validators.IS_JSON'>"
+p289
+sS'IS_IPADDRESS'
+p290
+S"<class 'gluon.validators.IS_IPADDRESS'>"
+p291
+sS'IS_SLUG'
+p292
+S"<class 'gluon.validators.IS_SLUG'>"
+p293
+sS'BEAUTIFY'
+p294
+S"<class 'gluon.html.BEAUTIFY'>"
+p295
+sS'META'
+p296
+S"<class 'gluon.html.META'>"
+p297
+sS'IS_DATE'
+p298
+S"<class 'gluon.validators.IS_DATE'>"
+p299
+sS'IS_EMAIL'
+p300
+S"<class 'gluon.validators.IS_EMAIL'>"
+p301
+sS'IS_NOT_EMPTY'
+p302
+S"<class 'gluon.validators.IS_NOT_EMPTY'>"
+p303
+sS'IS_FLOAT_IN_RANGE'
+p304
+S"<class 'gluon.validators.IS_FLOAT_IN_RANGE'>"
+p305
+sS'TBODY'
+p306
+S"<class 'gluon.html.TBODY'>"
+p307
+sS'CAT'
+p308
+S"<class 'gluon.html.CAT'>"
+p309
+sS'Field'
+p310
+S"<class 'gluon.dal.Field'>"
+p311
+sS'DIV'
+p312
+S"<class 'gluon.html.DIV'>"
+p313
+sS'LEGEND'
+p314
+S"<class 'gluon.html.LEGEND'>"
+p315
+sS'COLGROUP'
+p316
+S"<class 'gluon.html.COLGROUP'>"
+p317
+sS'DAL'
+p318
+S"<class 'gluon.dal.DAL'>"
+p319
+sS'TT'
+p320
+S"<class 'gluon.html.TT'>"
+p321
+sS'TR'
+p322
+S"<class 'gluon.html.TR'>"
+p323
+sS'LI'
+p324
+S"<class 'gluon.html.LI'>"
+p325
+sS'IFRAME'
+p326
+S"<class 'gluon.html.IFRAME'>"
+p327
+sS'TD'
+p328
+S"<class 'gluon.html.TD'>"
+p329
+sS'IS_URL'
+p330
+S"<class 'gluon.validators.IS_URL'>"
+p331
+sS'A'
+S"<class 'gluon.html.A'>"
+p332
+sS'STYLE'
+p333
+S"<class 'gluon.html.STYLE'>"
+p334
+sS'IS_DATETIME_IN_RANGE'
+p335
+S"<class 'gluon.validators.IS_DATETIME_IN_RANGE'>"
+p336
+sS'IS_IMAGE'
+p337
+S"<class 'gluon.validators.IS_IMAGE'>"
+p338
+sS'I'
+S"<class 'gluon.html.I'>"
+p339
+sS'IS_NOT_IN_DB'
+p340
+S"<class 'gluon.validators.IS_NOT_IN_DB'>"
+p341
+sg119
+S"<Storage {'body': <cStringIO.StringO object at 0...da> at 0x164b140>, 'view': 'default/index.html'}>"
+p342
+sS'THEAD'
+p343
+S"<class 'gluon.html.THEAD'>"
+p344
+sS'ANY_OF'
+p345
+S"<class 'gluon.validators.ANY_OF'>"
+p346
+sS'IS_NULL_OR'
+p347
+S"<class 'gluon.validators.IS_EMPTY_OR'>"
+p348
+sg56
+S"<Storage {'function': 'index', 'body': <cStringI.../applications/tjdf/', 'post_vars': <Storage {}>}>"
+p349
+sS'IS_EXPR'
+p350
+S"<class 'gluon.validators.IS_EXPR'>"
+p351
+sS'IS_IN_SET'
+p352
+S"<class 'gluon.validators.IS_IN_SET'>"
+p353
+sS'IS_UPLOAD_FILENAME'
+p354
+S"<class 'gluon.validators.IS_UPLOAD_FILENAME'>"
+p355
+sS'IS_DECIMAL_IN_RANGE'
+p356
+S"<class 'gluon.validators.IS_DECIMAL_IN_RANGE'>"
+p357
+sS'T'
+S'<gluon.languages.translator object>'
+p358
+sssS'traceback'
+p359
+S'Traceback (most recent call last):\n  File "/home/jbtte/web2py/gluon/restricted.py", line 212, in restricted\n    exec ccode in environment\n  File "/home/jbtte/web2py/applications/tjdf/models/db.py", line 22, in <module>\n    Field(\'classe\', default=session.classe.encode("utf8")),\nAttributeError: \'NoneType\' object has no attribute \'encode\'\n'
+p360
+s.

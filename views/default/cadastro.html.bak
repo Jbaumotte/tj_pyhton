@@ -1,3 +1,7 @@
 {{extend 'layout.html'}}
 <h1>Este é o template default/cadastro.html</h1>
-{{ print session.reu, session.classe, session.competencia, session.numero}}
+{{=session.reu}}
+ {{=session.classe}}
+ {{=session.competencia}}
+ {{=session.numero}}
+ {{=session.crime}}

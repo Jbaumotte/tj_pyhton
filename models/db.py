@@ -15,11 +15,15 @@ else:
 from gluon.tools import Auth
 auth = Auth(db)
 auth.define_tables(username=True)
+auth.settings.registration_requires_approval = True
 
 db.define_table('processo',
+   Field('user', default = auth.user_id),
    Field('criado_em', 'datetime', default=request.now),
    Field('classe'),
    Field('numero'),
    Field('competencia'),
    Field('reu'),
    Field('crime'))
+   
+db.processo.numero.requires = IS_NOT_IN_DB(db, 'processo.numero')

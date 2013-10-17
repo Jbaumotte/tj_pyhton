@@ -120,3 +120,5 @@ CREATE TABLE processo(
     crime CHAR(512)
 );
 success!
+timestamp: 2013-10-15T19:28:31.427608
+ALTER TABLE processo ADD user CHAR(512);

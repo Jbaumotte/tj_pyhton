@@ -1,0 +1,3 @@
+{{extend 'layout.html'}}
+<h4>Processos cadastrados entre {{=session.inicial}} e {{=session.final}}:<h4>
+{{=BEAUTIFY(response._vars)}}
