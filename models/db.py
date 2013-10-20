@@ -27,3 +27,7 @@ db.define_table('processo',
    Field('crime'))
    
 db.processo.numero.requires = IS_NOT_IN_DB(db, 'processo.numero')
+
+db.define_table('escolhe',
+    Field('numero'),
+    Field('classe'))

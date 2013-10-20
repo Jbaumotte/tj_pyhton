@@ -1,6 +1,10 @@
 {{extend 'layout.html'}}
+{{right_sidebar_enabled = globals().get('right_sidebar_enabled',True)}}
 {{=SQLTABLE(rows, columns=db.processo.criado_em)}}
-<h4>
+
+    {{block left_sidebar}}
+    <h4>
     Relatora: {{=session.frelatora}}<br>
     Revisora: {{=session.frevisora}}<br>
     Total: {{=session.ftotal}}<h4>
+        {{end}}

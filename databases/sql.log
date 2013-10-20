@@ -122,3 +122,16 @@ CREATE TABLE processo(
 success!
 timestamp: 2013-10-15T19:28:31.427608
 ALTER TABLE processo ADD user CHAR(512);
+timestamp: 2013-10-20T01:43:02.446914
+CREATE TABLE escolhe(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    numero CHAR(512),
+    classe CHAR(512)
+);
+success!
+DELETE FROM escolhe;
+DELETE FROM sqlite_sequence WHERE name='escolhe';
+success!
+DELETE FROM escolhe;
+DELETE FROM sqlite_sequence WHERE name='escolhe';
+success!

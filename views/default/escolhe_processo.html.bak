@@ -1,0 +1,10 @@
+{{extend 'layout.html'}}
+
+<form action="soup_cadastrar" method="post">
+	<table class = "table_tj4">
+        <tr><td><input type="radio" name="processo" value={{=session.reu_one}}>  {{=session.classe_one}}</td></tr>
+        <tr><td><input type="radio" name="processo" value={{=session.reu_two}}>  {{=session.classe_two}}</td></tr>
+	    <br>
+	    <tr><td colspan="2"><input id='botao-conferir' type="submit" value="Buscar"></td></tr>
+	</table>
+<form>
